@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/zhenghui/AiProject/MyProject/MNIST/Saver/model.pb"
+all_model_checkpoint_paths: "/Users/zhenghui/AiProject/MyProject/MNIST/Saver/model.pb"
