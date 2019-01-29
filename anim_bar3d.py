@@ -50,16 +50,12 @@ fig = plt.figure()
 ax = Axes3D(fig)
 ax.set_zlim(-0.1, 0.1)
 
-bar3d = ax.bar3d(x, y, 0, 0.5, 0.5, top, shade=False, alpha=0.8)
+bar3d = ax.bar3d(x, y, 0, 0.5, 0.5, top, color='b', shade=False)
+bar3d.set_alpha(0.8)
 
-color_list = []
-red = 0xff0000
-# for index in range(len(top)):
-#     color_list.extend('{0:06X}'.format(round(red * top[index])))
+bar3d.set_edgecolor('#ff0000')
 
-bar3d.set_facecolor('#010000')
-
-# bar3d_anim = animation.FuncAnimation(fig, update_bar3d, 10, fargs=[bar3d], interval=20, blit=False)
+bar3d_anim = animation.FuncAnimation(fig, update_bar3d, 10, fargs=[bar3d], interval=20, blit=False)
 
 plt.show()
 
