@@ -2,6 +2,13 @@ import argparse
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 
+"""
+============
+evaluate model accuracy script
+============
+
+"""
+
 mnist = input_data.read_data_sets('../dataset', one_hot=True)
 
 parser = argparse.ArgumentParser()

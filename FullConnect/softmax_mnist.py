@@ -32,10 +32,10 @@ sess.run(init)
 for i in range(2000):
     if i % 100 == 0:
         print('saving step : {}'.format(i))
-        for j in range(10):
-            w_i = w1.eval(sess)[:, j].reshape([28, 28])
-            np.savetxt('w_' + str(i) + '_' + str(j), w_i)
-        print('{} written'.format(i))
+        # for j in range(10):
+        #     w_i = w1.eval(sess)[:, j].reshape([28, 28])
+        #     np.savetxt('w_' + str(i) + '_' + str(j), w_i)
+        # print('{} written'.format(i))
     batch_xs, batch_ys = mnist.train.next_batch(50)
     sess.run(train_step, feed_dict={x: batch_xs, y_label: batch_ys})
 

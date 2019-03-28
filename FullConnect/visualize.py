@@ -3,6 +3,12 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import argparse
 
+"""
+============
+visualize matrix
+============
+"""
+
 parser = argparse.ArgumentParser()
 parser.add_argument('-i')
 input = parser.parse_args().i

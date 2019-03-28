@@ -79,9 +79,9 @@ with tf.Session() as sess:
                 train_accuracy = accuracy.eval(feed_dict={x: batch[0], y_: batch[1], keep_prob: 1.0})
                 print("step %d, training accuracy %g"%(i, train_accuracy))
                 # session_writer.add_summary(filter_w1.eval()[:, :, :, -1], i)
-                conv1 = W_conv1.eval()[:, :, -1, -1]
-                np.savetxt('conv1_' + str(i), conv1)
-                print('{} written'.format(str(i)))
+                # conv1 = W_conv1.eval()[:, :, -1, -1]
+                # np.savetxt('conv1_' + str(i), conv1)
+                # print('{} written'.format(str(i)))
 
             train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
     print("test accuracy %g"%accuracy.eval(feed_dict={x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0}))
