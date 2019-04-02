@@ -1,3 +1,10 @@
+"""
+循环卷积网络
+网络结构：单层LSTM运算单元
+输入：1x784
+输出：1x10
+
+"""
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 

@@ -10,7 +10,6 @@ num_classes = 10
 y_test = keras.utils.to_categorical(y_test, num_classes)
 
 model = load_model('keras_fc.h5')
-# score = model.evaluate(x_test.reshape(10000, 784), y_test, verbose=0)
 x = x_test[12, :, :]
 
 result = model.predict(x.reshape(-1, 784))
